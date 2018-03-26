@@ -61,7 +61,7 @@ public class NewBehaviourScript1 : MonoBehaviour {
     }
 }
 ```
-###解释：
+### 解释：
 > * **Awake：**用于在游戏开始之前初始化变量或游戏状态。在脚本整个生命周期内它仅被调用一次.Awake在所有对象被初始化之后调用。
 > * **Start：**仅在Update函数第一次被调用前调用。Start在behaviour的生命周期中只被调用一次。
 > * **FixedUpdate：**固定帧更新，更新频率默认为0.02s。
@@ -77,7 +77,7 @@ public class NewBehaviourScript1 : MonoBehaviour {
 ![4](https://www.zybuluo.com/static/img/logo.png)
 
 ------
-##4.查找脚本手册，了解GameObject，Transform，Component 对象
+## 4.查找脚本手册，了解GameObject，Transform，Component 对象
 
 ### A.分别翻译官方对三个对象的描述（Description)
 > * **GameObject:** 游戏中的每个对象都是一个游戏对象(GameObject)。然而，游戏对象(GameObjects)本身不做任何事情。它们需要特殊属性(special properties)才能成为一个角色、一种环境或者一种特殊效果。
@@ -159,7 +159,7 @@ foreach (Transform child in transform) {
 ## 6.资源预设（Prefabs）与 对象克隆 (clone)
 ### A.预设（Prefabs）有什么好处？
 &emsp;预设是一个非常容易复用的类模板，可以迅速方便创建大量相同属性的对象、操作简单，代码量少，减少出错概率。
-###B.预设与对象克隆(clone or copy or Instantiate of Unity Object)关系？
+### B.预设与对象克隆(clone or copy or Instantiate of Unity Object)关系？
 &emsp;预设可以使修改的复杂度降低，一旦需要修改所有相同属性的对象，只需要修改预设即可，所有通过预设实例化的对象都会做出相应变化。而克隆只是复制一个一模一样的对象，这个对象独立于原来的对象，在修改的过程中不会影响原有的对象，这样不方便整体改动。
 ### C.制作 table 预制，写一段代码将 table 预制资源实例化成游戏对象
 ```c#   
