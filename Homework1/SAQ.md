@@ -7,8 +7,8 @@
 
 ------
 ## 2.下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）
-![structure of objects](https://www.zybuluo.com/static/img/logo.png)
-![assets](https://www.zybuluo.com/static/img/logo.png)
+![structure of objects](https://github.com/dick20/3d-learning/blob/master/Homework1/image/1.png)
+![assets](https://github.com/dick20/3d-learning/blob/master/Homework1/image/2.png)
 
 查看了几个游戏案例后，资源的目录组织结构基本包括Prefabs预设，resources动态加载的资源文件，Scenes场景文件，Scenes场景文件，Scripts脚本代码文件，Sounds音效文件，Textures所有的贴图等等...而游戏对象树类似于多个父子继承关系，一个游戏对象往往是包括了多个子对象。
 
@@ -73,8 +73,8 @@ public class NewBehaviourScript1 : MonoBehaviour {
 > * **OnDestroy：**当MonoBehaviour将被销毁时，这个函数被调用。OnDestroy只会在预先已经被激活的游戏物体上被调用。
 
 ### 效果截图如下
-![3](https://www.zybuluo.com/static/img/logo.png)
-![4](https://www.zybuluo.com/static/img/logo.png)
+![3](https://github.com/dick20/3d-learning/blob/master/Homework1/image/3.png)
+![4](https://github.com/dick20/3d-learning/blob/master/Homework1/image/4.png)
 
 ------
 ## 4.查找脚本手册，了解GameObject，Transform，Component 对象
@@ -86,14 +86,14 @@ public class NewBehaviourScript1 : MonoBehaviour {
 
 ### B.描述下图中table对象（实体）的属性、table的Transform的属性、table的部件。本题目要求是把可视化图形编程界面与 Unity API 对应起来，当你在Inspector面板上每一个内容，应该知道对应 API。
 
-![5](https://www.zybuluo.com/static/img/logo.png)
+![5](https://github.com/dick20/3d-learning/blob/master/Homework1/image/5.png)
 
 &emsp; table 的对象是GameObject，第一个选择框是 activeSelf属性，第二个选择框是Transform属性，第三个选择框是Mesh Filter筛网过滤器属性，第四个选择框是Box Collider属性，第五个选择框是Mesh Renderer筛网渲染器属性，第六个选择框是Default-Material属性。
 &emsp; 其中table的Transform属性有Position X为0、Y为0、Z为0，Rotation X为0、Y为0、Z为0，Scale X为1、Y为1、Z为1。
 
 ### C.用 UML 图描述 三者的关系（请使用 UMLet 14.1.1 stand-alone版本画图）
 
-![6](https://www.zybuluo.com/static/img/logo.png)
+![6](https://github.com/dick20/3d-learning/blob/master/Homework1/image/10.png)
 
 ------
 ## 5.整理相关学习资料，编写简单代码验证以下技术的实现：
@@ -115,7 +115,7 @@ void Awake()
         }
 }
 ```
-![7](https://www.zybuluo.com/static/img/logo.png)
+![7](https://github.com/dick20/3d-learning/blob/master/Homework1/image/6.png)
 
 * 通过标签获取单个游戏对象**public static GameObject FindWithTag(string tag))**返回一个用tag做标识的活动的对象，如果没有找到则为null。
 * 通过标签获取多个游戏对象**public static GameObject[] FindGameObjectsWithTag(string tag)**;返回一个用tag做标识的游戏对象的数组，如果没有找到对象则返回空数组。
@@ -138,7 +138,7 @@ void Start()
         temp.transform.position = new Vector3(2, 1, 1);
 }
 ```
-![8](https://www.zybuluo.com/static/img/logo.png)
+![8](https://github.com/dick20/3d-learning/blob/master/Homework1/image/7.png)
 
 ### C.遍历对象树
 ```c#   
@@ -146,7 +146,7 @@ foreach (Transform child in transform) {
             Debug.Log(child.position);
         }
 ```
-![9](https://www.zybuluo.com/static/img/logo.png)
+![9](https://github.com/dick20/3d-learning/blob/master/Homework1/image/8.png)
 
 ### D.清除所有子对象
 ```c#   
