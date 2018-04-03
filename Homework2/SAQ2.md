@@ -8,7 +8,7 @@
     
 ------
 ### B. 请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…）
->* 利用transform方法直接改变position
+>*  利用transform中的position属性方法直接改变位置 
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -61,12 +61,13 @@ public class NewBehaviourScript1 : MonoBehaviour {
 }
 ```
 >* 利用transform.Translate()方法
-function Translate (translation : Vector3, relativeTo : Space = Space.Self) : void
+function Translate (translation : Vector3, relativeTo : Space = Space.Self) : void
 物体以relativeTo为参照系，沿着translation运动|translation|的距离。如果relativeTo缺省将以Space.Self为默认值。
 
 ------
 ### C.写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。
-![效果图](https://www.zybuluo.com/static/img/logo.png)
+![效果](http://img.blog.csdn.net/20180403194819826?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGlja2RpY2sxMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 ```c#
 //对于八大行星围绕太阳公转
 using System.Collections;
@@ -77,7 +78,7 @@ public class NewBehaviourScript1 : MonoBehaviour {
     public Transform sun;
     public float speed = 15;
     private float random_x, random_y;
-
+	//由于题目需要行星要在不同的法平面旋转，故我们随机行星旋转的轴位置
     private void Start()
     {
         random_x = Random.Range(1, 10);
@@ -111,16 +112,35 @@ Priests and Devils
 
 Priests and Devils is a puzzle game in which you will help the Priests and Devils to cross the river within the time limit. There are 3 priests and 3 devils at one side of the river. They all want to get to the other side of this river, but there is only one boat and this boat can only carry two persons each time. And there must be one person steering the boat from one side to the other side. In the flash game, you can click on them to move them and click the go button to move the boat to the other direction. If the priests are out numbered by the devils on either side of the river, they get killed and the game is over. You can try it in many > ways. Keep all priests alive! Good luck!
 ### B. 程序需要满足的要求：
->* play the game ( http://www.flash-game.net/game/2535/priests-and-devils.html )
+>* 游戏具体细节可参照(http://www.flash-game.net/game/2535/priests-and-devils.html )
 >* 列出游戏中提及的事物（Objects）
     &emsp;&emsp;魔鬼，牧师，河流，船，左岸边，右岸边
 >* 用表格列出玩家动作表（规则表），注意，动作越少越好
-&emsp;&emsp;![列表](https://www.zybuluo.com/static/img/logo.png)
+>| 规则名称      |    条件 |
+| --------- | -------| 
+| 牧师或魔鬼上左岸  | 船已靠左岸，船上有牧师或魔鬼 |
+| 牧师或魔鬼上右岸  | 船已靠右岸，船上有牧师或魔鬼 |
+| 魔鬼上船       |   岸上有魔鬼，船未载满两人|
+| 牧师上船  |  岸上有牧师，船未载满两人 |
+| 船只开动  | 船上有人 |
+| 击杀规则      |   一边的牧师数量少于魔鬼的数量|
+| 游戏胜利规则      |   所有角色从左岸到达右岸，且全部存活|
+| 游戏失败规则      |   牧师被击杀|
+
+
 >* 请将游戏中对象做成预制
-&emsp;&emsp;![Perfabs](https://www.zybuluo.com/static/img/logo.png)
+
+>![Perfabs](http://img.blog.csdn.net/20180403200204542?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGlja2RpY2sxMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 >* 在 GenGameObjects 中创建 长方形、正方形、球 及其色彩代表游戏中的对象。
-&emsp;&emsp;白正方形表示牧师，黑球代表魔鬼，棕色长方体代表船,绿色长方体左右岸，蓝色长方体代表河流。
+
+>&emsp;&emsp;白正方形表示牧师，黑球代表魔鬼，棕色长方体代表船,绿色长方体左右岸，蓝色长方体代表河流。
+
 >* 使用 C# 集合类型 有效组织对象
->* 整个游戏仅 主摄像机 和 一个 Empty 对象， 其他对象必须代码动态生成！！！ 。 整个游戏不许出现 Find 游戏对象， SendMessage 这类突破程序结构的 通讯耦合 语句。 违背本条准则，不给分
+>* 整个游戏仅 主摄像机 和 一个 Empty 对象， 其他对象必须代码动态生成！整个游戏不许出现 Find 游戏对象，SendMessage 这类突破程序结构的通讯耦合语句。
 >* 请使用课件架构图编程，不接受非 MVC 结构程序
+>![mvc](http://img.blog.csdn.net/20180403200515803?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGlja2RpY2sxMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 >* 注意细节，例如：船未靠岸，牧师与魔鬼上下船运动中，均不能接受用户事件！
+
+![效果图](http://img.blog.csdn.net/20180403200724023?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGlja2RpY2sxMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+------
