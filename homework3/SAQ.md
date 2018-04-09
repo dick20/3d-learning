@@ -8,8 +8,9 @@
 >* 增加多一个摄像头，实现Cube的俯视图，需要注意的是调整摄像头的Depth大于-1，且将视图的大小和位置调整至右下角。
 
 实现效果如下图所示：
-![show1](https://www.zybuluo.com/static/img/logo.png)
-![show2](https://www.zybuluo.com/static/img/logo.png)
+
+![show1](https://github.com/dick20/3d-learning/blob/master/homework3/image/图片1.png)
+![show2](https://github.com/dick20/3d-learning/blob/master/homework3/image/图片2.png)
 
 ### 2.写一个简单的总结，总结游戏对象的使用
 >* 具体上来说，所有游戏对象都有Active属性，Name属性，Tag属性等。每个游戏对象 (GameObject) 还包含一个变换transform组件。我们可以通过这个组件来使游戏对象改变位置，旋转和缩放。我们还可以添加许许多多不同的组件或脚本来增加游戏对象的功能。
@@ -25,7 +26,7 @@
 灯光类型（type）包括平行光（类似太阳光），聚光灯（spot），点光源（point），区域光（area，仅烘培用）。
  + 地形构造工具Terrain
 属性解释如图所示：
-![show2](https://www.zybuluo.com/static/img/logo.png)
+![show3](https://github.com/dick20/3d-learning/blob/master/homework3/image/图片3.png)
  + 声音audio
 将声音素材拖入摄像机就可以成为背景音乐。可以设置是否重复，音量等属性
  + 游戏资源库
